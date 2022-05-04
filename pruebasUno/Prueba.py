@@ -18,9 +18,16 @@ import tkinter as tk
 #Importante import para una mejor configuración
 # definicioón de funciones con los botones
 def lucesamarillas():
-    print("Encender luces amarillas")
+    print(10109)
+    
 def lucesrojas():
     print("Luces rojas encendidas")
+    
+def apagaamarilla():
+    print("Apagadas luces amarillas")
+    
+def apagarojas():
+    print("Luces rojas apagadas")
 
 # Define la ventana principal de la aplicación
 raiz = Tk()
@@ -41,6 +48,10 @@ raiz.title('Tesa Marchena')
 # He colocado ruta relativa, es decir, la imagen a la misma 
 # altura de la aplicación. Si prefieres, puedes colocar una
 # ruta absoluta.
+
+raiz.iconbitmap('ic_launcher.ico')
+#Ojo el icono en linux no funciona
+
 imagen = PhotoImage(file = "Tesa.png")
 
 # Con Label y la opción image, puedes mostrar una imagen en el widget:
@@ -64,8 +75,8 @@ raiz.resizable(False, False)
 
 
 tk.Button(raiz, text='Salir', foreground="#ff0000", background="#000000", command=quit).pack(side=tk.BOTTOM)
-tk.Button(raiz, text='Apagar luces rojas', background="#ff0000", command=lucesrojas).pack(side=tk.BOTTOM)
-tk.Button(raiz, text='Apagar luces amarilas', background="#f8ff3b", command=lucesamarillas).pack(side=tk.BOTTOM)
+tk.Button(raiz, text='Apagar luces rojas', background="#ff0000", command=apagarojas).pack(side=tk.BOTTOM)
+tk.Button(raiz, text='Apagar luces amarilas', background="#f8ff3b", command=apagaamarilla).pack(side=tk.BOTTOM)
 tk.Button(raiz, text='Encender luces amarilas', background="#f8ff3b", command=lucesamarillas).pack(side=tk.TOP)
 tk.Button(raiz, text='Encender luces rojas', background="#ff0000", command=lucesrojas).pack(side=tk.TOP)
 
